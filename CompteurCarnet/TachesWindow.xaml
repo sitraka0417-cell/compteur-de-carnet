@@ -1,0 +1,30 @@
+<Window x:Class="CompteurCarnet.TachesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Faire les tâches" Height="650" Width="480"
+        Background="{StaticResource BgBrush}"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="25">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="Faire les tâches"
+                   FontSize="24" FontWeight="Bold"
+                   Foreground="{StaticResource TextBrush}"
+                   HorizontalAlignment="Center"
+                   Margin="0,0,0,20"/>
+
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+            <StackPanel x:Name="OngletsContainer"/>
+        </ScrollViewer>
+
+        <Button x:Name="BtnAjouter" Grid.Row="2" Content="Ajouter une autre onglet"
+                Style="{StaticResource MenuButton}"
+                Background="{StaticResource GreenBrush}"
+                Margin="0,15,0,0"
+                Click="BtnAjouter_Click"/>
+    </Grid>
+</Window>
